@@ -73,6 +73,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrinterEventArgs.cs" />
     <Compile Include="PrinterUserControl.xaml.cs">
       <DependentUpon>PrinterUserControl.xaml</DependentUpon>
     </Compile>
@@ -104,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="solution\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\printer.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

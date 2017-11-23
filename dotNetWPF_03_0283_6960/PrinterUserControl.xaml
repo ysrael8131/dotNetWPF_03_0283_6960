@@ -5,23 +5,38 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:dotNetWPF_03_0283_6960"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" BorderBrush="Black" BorderThickness="1" Width="450" Height="160">
+             d:DesignHeight="300" d:DesignWidth="300" Width="Auto" Height="Auto" BorderThickness="1" BorderBrush="Black">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="2" >
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
+            <Label x:Name="inkLabel"  Content="Ink:"/>
+            <Label x:Name="pageLabel" Grid.Row="1" Content="Pages:"/>
+            <ProgressBar Grid.Column="1" Name="inkCountProgressBar" Value="26" 
+                         ToolTipOpening="tooOPEN" ToolTipClosing="tooCLOSE" ToolTip="mmm" />
+            <Slider Grid.Column="1" Grid.Row="1" Name="pageCountSlider" Value="200" Maximum="400"/>
         </Grid>
+        <Image Grid.Row="0" Source="images/printer.jpg"/>
+        <Label
+            Grid.Row="1"
+            Name="printerNameLabel"
+            Content="printer Name"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Foreground="RoyalBlue"
+            FontSize="16" 
+            MouseEnter="printerNameLabel_MouseEnter" MouseLeave="printerNameLabel_MouseLeave" 
+            />
     </Grid>
-
 </UserControl>
